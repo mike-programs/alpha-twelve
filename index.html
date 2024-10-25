@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+
+        <!-- LOGO -->
+        <div class="logo-container">
+            <p class="logo">full logo</p>
+            <img src="./images/solar_hamburger-menu-broken.svg" alt="hamburger menu" class="icon hamburger">
+        </div>
+
+        <hr class="horizontal-rule">
+
+        <!-- NAVIGATION -->
+        <nav class="nav-container">
+            <div class="nav-links">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="nav-svg">
+                    <path
+                        d="M5.62515 16.0418H14.3752C15.2956 16.0418 16.0418 15.2956 16.0418 14.3752V8.12516L10.0002 3.9585L3.95849 8.12516V14.3752C3.95849 15.2956 4.70468 16.0418 5.62515 16.0418Z"
+                        stroke="#ADA9BB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M8.12464 13.1243C8.12464 12.2039 8.87084 11.4577 9.79131 11.4577H10.208C11.1285 11.4577 11.8746 12.2039 11.8746 13.1243V16.041H8.12464V13.1243Z"
+                        stroke="#ADA9BB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+                <a href="#">home</a>
+            </div>
+            <div class="nav-links">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="nav-svg">
+                    <path
+                        d="M1.66667 10C1.66667 6.85754 1.66667 5.28587 2.64333 4.31004C3.62 3.33421 5.19083 3.33337 8.33333 3.33337H11.6667C14.8092 3.33337 16.3808 3.33337 17.3567 4.31004C18.3325 5.28671 18.3333 6.85754 18.3333 10V11.6667C18.3333 14.8092 18.3333 16.3809 17.3567 17.3567C16.38 18.3325 14.8092 18.3334 11.6667 18.3334H8.33333C5.19083 18.3334 3.61917 18.3334 2.64333 17.3567C1.6675 16.38 1.66667 14.8092 1.66667 11.6667V10Z"
+                        stroke="#ADA9BB" stroke-width="1.5" />
+                    <path d="M5.83333 3.33337V2.08337M14.1667 3.33337V2.08337M2.08333 7.50004H17.9167" stroke="#ADA9BB"
+                        stroke-width="1.5" stroke-linecap="round" />
+                    <path
+                        d="M15 14.1667C15 14.3877 14.9122 14.5996 14.7559 14.7559C14.5996 14.9122 14.3877 15 14.1667 15C13.9457 15 13.7337 14.9122 13.5774 14.7559C13.4211 14.5996 13.3333 14.3877 13.3333 14.1667C13.3333 13.9457 13.4211 13.7337 13.5774 13.5774C13.7337 13.4211 13.9457 13.3333 14.1667 13.3333C14.3877 13.3333 14.5996 13.4211 14.7559 13.5774C14.9122 13.7337 15 13.9457 15 14.1667ZM15 10.8333C15 11.0543 14.9122 11.2663 14.7559 11.4226C14.5996 11.5789 14.3877 11.6667 14.1667 11.6667C13.9457 11.6667 13.7337 11.5789 13.5774 11.4226C13.4211 11.2663 13.3333 11.0543 13.3333 10.8333C13.3333 10.6123 13.4211 10.4004 13.5774 10.2441C13.7337 10.0878 13.9457 10 14.1667 10C14.3877 10 14.5996 10.0878 14.7559 10.2441C14.9122 10.4004 15 10.6123 15 10.8333ZM10.8333 14.1667C10.8333 14.3877 10.7455 14.5996 10.5893 14.7559C10.433 14.9122 10.221 15 10 15C9.77899 15 9.56703 14.9122 9.41074 14.7559C9.25446 14.5996 9.16667 14.3877 9.16667 14.1667C9.16667 13.9457 9.25446 13.7337 9.41074 13.5774C9.56703 13.4211 9.77899 13.3333 10 13.3333C10.221 13.3333 10.433 13.4211 10.5893 13.5774C10.7455 13.7337 10.8333 13.9457 10.8333 14.1667ZM10.8333 10.8333C10.8333 11.0543 10.7455 11.2663 10.5893 11.4226C10.433 11.5789 10.221 11.6667 10 11.6667C9.77899 11.6667 9.56703 11.5789 9.41074 11.4226C9.25446 11.2663 9.16667 11.0543 9.16667 10.8333C9.16667 10.6123 9.25446 10.4004 9.41074 10.2441C9.56703 10.0878 9.77899 10 10 10C10.221 10 10.433 10.0878 10.5893 10.2441C10.7455 10.4004 10.8333 10.6123 10.8333 10.8333ZM6.66667 14.1667C6.66667 14.3877 6.57887 14.5996 6.42259 14.7559C6.26631 14.9122 6.05435 15 5.83333 15C5.61232 15 5.40036 14.9122 5.24408 14.7559C5.0878 14.5996 5 14.3877 5 14.1667C5 13.9457 5.0878 13.7337 5.24408 13.5774C5.40036 13.4211 5.61232 13.3333 5.83333 13.3333C6.05435 13.3333 6.26631 13.4211 6.42259 13.5774C6.57887 13.7337 6.66667 13.9457 6.66667 14.1667ZM6.66667 10.8333C6.66667 11.0543 6.57887 11.2663 6.42259 11.4226C6.26631 11.5789 6.05435 11.6667 5.83333 11.6667C5.61232 11.6667 5.40036 11.5789 5.24408 11.4226C5.0878 11.2663 5 11.0543 5 10.8333C5 10.6123 5.0878 10.4004 5.24408 10.2441C5.40036 10.0878 5.61232 10 5.83333 10C6.05435 10 6.26631 10.0878 6.42259 10.2441C6.57887 10.4004 6.66667 10.6123 6.66667 10.8333Z"
+                        fill="#ADA9BB" />
+                </svg>
+
+                <a href="#">events</a>
+            </div>
+            <div class="nav-links">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="nav-svg">
+                    <path
+                        d="M8.33333 8.33329C10.1743 8.33329 11.6667 6.84091 11.6667 4.99996C11.6667 3.15901 10.1743 1.66663 8.33333 1.66663C6.49238 1.66663 5 3.15901 5 4.99996C5 6.84091 6.49238 8.33329 8.33333 8.33329Z"
+                        stroke="#ADA9BB" stroke-width="1.5" />
+                    <path
+                        d="M8.33333 17.4999C11.555 17.4999 14.1667 16.0075 14.1667 14.1666C14.1667 12.3256 11.555 10.8333 8.33333 10.8333C5.11167 10.8333 2.5 12.3256 2.5 14.1666C2.5 16.0075 5.11167 17.4999 8.33333 17.4999Z"
+                        stroke="#ADA9BB" stroke-width="1.5" />
+                    <path
+                        d="M15.8333 1.66663C15.8333 1.66663 17.5 2.66663 17.5 4.99996C17.5 7.33329 15.8333 8.33329 15.8333 8.33329M14.1667 3.33329C14.1667 3.33329 15 3.83329 15 4.99996C15 6.16663 14.1667 6.66663 14.1667 6.66663"
+                        stroke="#ADA9BB" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+
+                <a href="#">speakers</a>
+            </div>
+            <div class="nav-links">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="nav-svg">
+                    <path
+                        d="M2.5 8.33329C2.5 5.19079 2.5 3.61913 3.47667 2.64329C4.45333 1.66746 6.02417 1.66663 9.16667 1.66663H10.8333C13.9758 1.66663 15.5475 1.66663 16.5233 2.64329C17.4992 3.61996 17.5 5.19079 17.5 8.33329V11.6666C17.5 14.8091 17.5 16.3808 16.5233 17.3566C15.5467 18.3325 13.9758 18.3333 10.8333 18.3333H9.16667C6.02417 18.3333 4.4525 18.3333 3.47667 17.3566C2.50083 16.38 2.5 14.8091 2.5 11.6666V8.33329Z"
+                        stroke="#ADA9BB" stroke-width="1.5" />
+                    <path d="M6.66667 8.33325H13.3333M6.66667 11.6666H10.8333" stroke="#ADA9BB" stroke-width="1.5"
+                        stroke-linecap="round" />
+                </svg>
+
+
+                <a href="#">reports</a>
+            </div>
+
+            <div class="flex">
+                <div class="nav-links">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="nav-svg">
+                        <path
+                            d="M7.5 13.9584C7.5 13.9584 7.5 16.0417 10 16.0417C12.5 16.0417 12.5 13.9584 12.5 13.9584M14.375 8.33337V10L16.0417 13.5417H3.95833L5.625 10V8.33337C5.625 5.91713 7.58375 3.95837 10 3.95837C12.4162 3.95837 14.375 5.91713 14.375 8.33337Z"
+                            stroke="#ADA9BB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                    <a href="#">notifications</a>
+                </div>
+
+                <p class="notification">3</p>
+            </div>
+            <div class="nav-links">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="nav-svg">
+                    <path
+                        d="M15.1893 8.75004C15.7127 9.39273 16.0274 10.2565 16.0274 11.3584C16.0274 12.3885 15.7524 13.2106 15.2889 13.8384C15.1208 14.0661 15.1562 14.597 15.2906 14.8461C15.6121 15.4424 15.0046 16.0959 14.3443 15.9445C13.85 15.8312 13.3315 15.6779 12.8778 15.4722C12.7117 15.3969 12.5283 15.3665 12.3471 15.387C12.1219 15.4125 11.8922 15.4251 11.6595 15.4251C10.5797 15.4251 9.56228 15.1538 8.78151 14.5834M12.6942 8.02507C12.6942 10.8297 10.6554 12.0918 8.32624 12.0918C8.09356 12.0918 7.86378 12.0792 7.63865 12.0537C7.45742 12.0332 7.274 12.0636 7.10789 12.1389C6.65418 12.3445 6.13572 12.4978 5.64145 12.6111C4.98112 12.7625 4.37361 12.1091 4.69515 11.5128C4.8295 11.2636 4.86492 10.7328 4.69681 10.505C4.23335 9.87722 3.95831 9.05519 3.95831 8.02507C3.95831 5.22045 5.99708 3.95837 8.32624 3.95837C10.6554 3.95837 12.6942 5.22045 12.6942 8.02507Z"
+                        stroke="#ADA9BB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+                <a href="#">messages</a>
+            </div>
+            <div class="nav-links">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="nav-svg">
+                    <path
+                        d="M4.68431 12.469L5.60164 12.6126C6.27882 12.7187 6.76242 13.3389 6.71255 14.0376L6.64497 14.9847C6.62528 15.2606 6.77226 15.5204 7.01571 15.6405L7.69419 15.9748C7.93764 16.095 8.22832 16.05 8.42714 15.8627L9.10891 15.2183C9.61154 14.7431 10.3871 14.7431 10.8904 15.2183L11.5722 15.8627C11.771 16.0507 12.0611 16.095 12.3051 15.9748L12.9849 15.6399C13.2277 15.5204 13.3741 15.2613 13.3544 14.9861L13.2868 14.0376C13.2369 13.3389 13.7205 12.7187 14.3977 12.6126L15.315 12.469C15.5821 12.4273 15.7973 12.2226 15.8577 11.9528L16.025 11.2023C16.0854 10.9325 15.9784 10.6526 15.7553 10.4969L14.9896 9.96056C14.4246 9.56453 14.252 8.79127 14.5932 8.1838L15.0558 7.36086C15.1904 7.12123 15.1681 6.82119 14.9994 6.60505L14.5302 6.00296C14.3616 5.78682 14.0808 5.69754 13.8222 5.77876L12.9351 6.05666C12.2796 6.26205 11.5807 5.91771 11.3288 5.26594L10.9889 4.38461C10.8891 4.12686 10.6457 3.9577 10.3747 3.95838L9.6227 3.96039C9.3517 3.96106 9.10891 4.13155 9.01048 4.38998L8.67912 5.26124C8.42977 5.91704 7.72766 6.26407 7.07017 6.05733L6.14627 5.76735C5.88708 5.68546 5.60493 5.77541 5.43629 5.99289L4.9704 6.59566C4.80176 6.81381 4.78142 7.11452 4.91856 7.35415L5.39167 8.1791C5.7401 8.78724 5.56949 9.56788 5.00124 9.96593L4.24467 10.4962C4.02157 10.6526 3.91461 10.9325 3.97498 11.2017L4.14231 11.9521C4.20202 12.2226 4.41724 12.4273 4.68431 12.469Z"
+                        stroke="#ADA9BB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                        d="M11.3259 8.67415C12.058 9.4063 12.058 10.5938 11.3259 11.3259C10.5937 12.0581 9.40626 12.0581 8.67411 11.3259C7.94196 10.5938 7.94196 9.4063 8.67411 8.67415C9.40626 7.942 10.5937 7.942 11.3259 8.67415Z"
+                        stroke="#ADA9BB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+                <a href="#">settings</a>
+            </div>
+            <div class="nav-links collapse">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="nav-svg">
+                    <path d="M9.37498 7.29166L6.45831 10L9.37498 12.7083M13.5416 7.29166L10.625 10L13.5416 12.7083"
+                        stroke="#64748B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+                <a href="#">collapse</a>
+            </div>
+            <div id="theme-toggle">
+                <div class="nav-links profile">
+                    <div class="toggle dark">
+                        <div class="switch"></div>
+                    </div>
+                    <p><span class="capitalize">dark</span> mode</p>
+                </div>
+            </div>
+
+            <div class="nav-links profile">
+                <img src="./images/Avatar.jpg" alt="avatar" class="profile-picture" />
+
+                <div>
+                    <p class="user-name capitalize">rudra devi</p>
+                    <p>rudra.devi@gmail.com</p>
+                </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+    <!-- MAIN -->
+    <main>
+        <div class="summary section">
+            <p class="welcome-message"><span>welcome!</span> here's your summary</p>
+
+            <!-- USER SUMMARY -->
+            <div class="summary-items">
+                <div class="summary-item">
+                    <div>
+                        <p class="summary-header">total events</p>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="information-svg">
+                            <path d="M8 8.66663V9.99996" stroke="#64748B" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M8.33332 5.99996C8.33332 6.18405 8.18408 6.33329 7.99999 6.33329C7.81589 6.33329 7.66666 6.18405 7.66666 5.99996C7.66666 5.81586 7.81589 5.66663 7.99999 5.66663C8.18408 5.66663 8.33332 5.81586 8.33332 5.99996Z"
+                                stroke="#64748B" />
+                            <path
+                                d="M12.8333 7.99996C12.8333 10.6693 10.6694 12.8333 7.99999 12.8333C5.33061 12.8333 3.16666 10.6693 3.16666 7.99996C3.16666 5.33058 5.33061 3.16663 7.99999 3.16663C10.6694 3.16663 12.8333 5.33058 12.8333 7.99996Z"
+                                stroke="#64748B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </div>
+                    <div>
+                        <p class="summary-value">100,000</p>
+                        <img src="./images/arrow-up-right.svg" alt="information-icon" class="trends-icon">
+                        <p class="trends">+5.0%</p>
+                    </div>
+                </div>
+
+                <div class="summary-item">
+                    <div>
+                        <p class="summary-header">active speakers</p>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="information-svg">
+                            <path d="M8 8.66663V9.99996" stroke="#64748B" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M8.33332 5.99996C8.33332 6.18405 8.18408 6.33329 7.99999 6.33329C7.81589 6.33329 7.66666 6.18405 7.66666 5.99996C7.66666 5.81586 7.81589 5.66663 7.99999 5.66663C8.18408 5.66663 8.33332 5.81586 8.33332 5.99996Z"
+                                stroke="#64748B" />
+                            <path
+                                d="M12.8333 7.99996C12.8333 10.6693 10.6694 12.8333 7.99999 12.8333C5.33061 12.8333 3.16666 10.6693 3.16666 7.99996C3.16666 5.33058 5.33061 3.16663 7.99999 3.16663C10.6694 3.16663 12.8333 5.33058 12.8333 7.99996Z"
+                                stroke="#64748B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </div>
+                    <div>
+                        <p class="summary-value">25</p>
+                        <img src="./images/arrow-down-right.svg" alt="information-icon" class="trends-icon">
+                        <p class="trends red">-5.0%</p>
+                    </div>
+                </div>
+
+                <div class="summary-item">
+                    <div>
+                        <p class="summary-header">total registrations</p>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="information-svg">
+                            <path d="M8 8.66663V9.99996" stroke="#64748B" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M8.33332 5.99996C8.33332 6.18405 8.18408 6.33329 7.99999 6.33329C7.81589 6.33329 7.66666 6.18405 7.66666 5.99996C7.66666 5.81586 7.81589 5.66663 7.99999 5.66663C8.18408 5.66663 8.33332 5.81586 8.33332 5.99996Z"
+                                stroke="#64748B" />
+                            <path
+                                d="M12.8333 7.99996C12.8333 10.6693 10.6694 12.8333 7.99999 12.8333C5.33061 12.8333 3.16666 10.6693 3.16666 7.99996C3.16666 5.33058 5.33061 3.16663 7.99999 3.16663C10.6694 3.16663 12.8333 5.33058 12.8333 7.99996Z"
+                                stroke="#64748B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </div>
+                    <div>
+                        <p class="summary-value">300</p>
+                        <img src="./images/arrow-up-right.svg" alt="information-icon" class="trends-icon">
+                        <p class="trends">+5.0%</p>
+                    </div>
+                </div>
+
+                <div class="summary-item">
+                    <div>
+                        <p class="summary-header">total revenue</p>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="information-svg">
+                            <path d="M8 8.66663V9.99996" stroke="#64748B" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M8.33332 5.99996C8.33332 6.18405 8.18408 6.33329 7.99999 6.33329C7.81589 6.33329 7.66666 6.18405 7.66666 5.99996C7.66666 5.81586 7.81589 5.66663 7.99999 5.66663C8.18408 5.66663 8.33332 5.81586 8.33332 5.99996Z"
+                                stroke="#64748B" />
+                            <path
+                                d="M12.8333 7.99996C12.8333 10.6693 10.6694 12.8333 7.99999 12.8333C5.33061 12.8333 3.16666 10.6693 3.16666 7.99996C3.16666 5.33058 5.33061 3.16663 7.99999 3.16663C10.6694 3.16663 12.8333 5.33058 12.8333 7.99996Z"
+                                stroke="#64748B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </div>
+                    <div>
+                        <p class="summary-value">$500,000</p>
+                        <img src="./images/arrow-up-right.svg" alt="information-icon" class="trends-icon">
+                        <p class="trends">+5.0%</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- EVENTS SECTION -->
+        <div class="events-section section">
+            <div>
+                <p class="events-header p-0">events registration <span>per month</span></p>
+            </div>
+
+
+            <div class="chart-slide-container">
+                <!-- CHART CONTAINER, BAR CHART -->
+                <div class="chart-container">
+                    <canvas id="myChart"></canvas>
+                </div>
+
+
+                <!-- IMAGE CAROUSEL -->
+                <div class="slide-container">
+                    <div class="slide active">
+                        <img src="./images/slide-img1.jpg" alt="slide image 1" class="slide-image">
+                        <div class="slide-text">
+                            <p class="slide-header">latest news & updates</p>
+                            <p>Turpis interdum nunc varius ornare dignissim pretium. Massa ornare quis aliquet sed
+                                vitae.
+                                Sed velit nisi, fermentum erat. Fringilla purus, erat fringilla tincidunt quisque non.
+                                Pellentesque in ut tellus.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <img src="./images/slide-img2.jpg" alt="slide image 2" class="slide-image">
+                        <div class="slide-text">
+                            <p class="slide-header">latest news & updates</p>
+                            <p>Turpis interdum nunc varius ornare dignissim pretium. Massa ornare quis aliquet sed
+                                vitae.
+                                Sed velit nisi, fermentum erat. Fringilla purus, erat fringilla tincidunt quisque non.
+                                Pellentesque in ut tellus.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <img src="./images/slide-img3.jpg" alt="slide image 3" class="slide-image">
+                        <div class="slide-text">
+                            <p class="slide-header">latest news & updates</p>
+                            <p>Turpis interdum nunc varius ornare dignissim pretium. Massa ornare quis aliquet sed
+                                vitae.
+                                Sed velit nisi, fermentum erat. Fringilla purus, erat fringilla tincidunt quisque non.
+                                Pellentesque in ut tellus.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="slide-buttons">
+                        <div class="slide-button">
+                            <img src="./images/chevron-left.svg" alt="left arrow" id="leftClick">
+                        </div>
+                        <div class="slide-button">
+                            <img src="./images/chevron-right.svg" alt="right arrow" id="rightClick">
+                        </div>
+                    </div>
+
+
+                    <div class="slide-index-container">
+                        <div class="slide-index active"></div>
+                        <div class="slide-index"></div>
+                        <div class="slide-index"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- EVENTS HISTORY -->
+        <div>
+            <div>
+                <p class="events-header">events history </p>
+            </div>
+            <div class="event-container">
+                <div class="filter-container">
+                    <div class="filter">
+                        <img src="./images/search.svg" alt="search image" class="icon">
+                        <p class="search-input">search...</p>
+                    </div>
+                    <div class="filter center">
+                        <p>date</p>
+                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="dropdown-svg">
+                            <path d="M10.6667 7.16675L8.49999 9.50008L6.33333 7.16675" stroke="#334155"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </div>
+                    <div class="filter center">
+                        <p>status</p>
+                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="dropdown-svg">
+                            <path d="M10.6667 7.16675L8.49999 9.50008L6.33333 7.16675" stroke="#334155"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </div>
+                    <div class="filter center">
+                        <p>name</p>
+                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="dropdown-svg">
+                            <path d="M10.6667 7.16675L8.49999 9.50008L6.33333 7.16675" stroke="#334155"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </div>
+                    <p class="result-heading">Displaying 100 results</p>
+                </div>
+
+                <div>
+                    <div class="filter-container">
+                        <div class="flex sort">
+                            <p class="capitalize">sort:</p>
+
+                            <div class="filter fit">
+                                <p class="">most recent</p>
+                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="dropdown-svg">
+                                    <path d="M10.6667 7.16675L8.49999 9.50008L6.33333 7.16675" stroke="#334155"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="flex export">
+                            <div class="filter fit">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="dots-svg">
+                                    <path
+                                        d="M10.4166 5.83341C10.4166 6.06353 10.2301 6.25008 9.99998 6.25008C9.76986 6.25008 9.58331 6.06353 9.58331 5.83341C9.58331 5.6033 9.76986 5.41675 9.99998 5.41675C10.2301 5.41675 10.4166 5.6033 10.4166 5.83341Z"
+                                        stroke="#141414" />
+                                    <path
+                                        d="M10.4166 10.0001C10.4166 10.2302 10.2301 10.4167 9.99998 10.4167C9.76986 10.4167 9.58331 10.2302 9.58331 10.0001C9.58331 9.76996 9.76986 9.58341 9.99998 9.58341C10.2301 9.58341 10.4166 9.76996 10.4166 10.0001Z"
+                                        stroke="#141414" />
+                                    <path
+                                        d="M10.4166 14.1667C10.4166 14.3969 10.2301 14.5834 9.99998 14.5834C9.76986 14.5834 9.58331 14.3969 9.58331 14.1667C9.58331 13.9366 9.76986 13.7501 9.99998 13.7501C10.2301 13.7501 10.4166 13.9366 10.4166 14.1667Z"
+                                        stroke="#141414" />
+                                </svg>
+
+                            </div>
+
+                            <div class="filter fit">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" class="download-svg">
+                                    <path
+                                        d="M3.16663 9.83341V10.8334C3.16663 11.938 4.06206 12.8334 5.16663 12.8334H10.8333C11.9379 12.8334 12.8333 11.938 12.8333 10.8334V9.83341M7.99996 9.50008V3.16675M7.99996 9.50008L5.83329 7.16675M7.99996 9.50008L10.1666 7.16675"
+                                        stroke="#141414" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                                <p>export</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- RESULT TABLE -->
+        <div class="table-container">
+            <div class="table header section">
+                <p class="event">event name</p>
+                <p class="date">date</p>
+                <p class="speaker">speaker</p>
+                <p class="status-header">status</p>
+            </div>
+
+            <!-- 1 -->
+            <div class="table">
+                <div class="event">
+                    <svg width="18" height="18" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="table-left-svg">
+                        <path d="M5.375 4.375L7.125 6L5.375 7.625" stroke="#334155" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <p class="capitalize">cloud innovation summit</p>
+                </div>
+                <p class="date">2024-10-15</p>
+                <p class="speaker">jane doe</p>
+                <div class="status">
+                    <img src="./images/Status Dot.svg" alt="status dot icon" class="icon status-icon">
+                    <p>completed</p>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="table">
+                <div class="event">
+                    <svg width="18" height="18" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="table-left-svg">
+                        <path d="M5.375 4.375L7.125 6L5.375 7.625" stroke="#334155" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <p class="capitalize">blockchain revolution conference</p>
+                </div>
+                <p class="date">2024-11-05</p>
+                <p class="speaker">dr. peter smith</p>
+                <div class="status in-progress">
+                    <img src="./images/Status DotG.svg" alt="status dot icon" class="icon status-icon">
+                    <p>in progress</p>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="table">
+                <div class="event">
+                    <svg width="18" height="18" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="table-left-svg">
+                        <path d="M5.375 4.375L7.125 6L5.375 7.625" stroke="#334155" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <p class="capitalize">AI in healthcare symposium</p>
+                </div>
+                <p class="date">2024-12-01</p>
+                <p class="speaker">dr. aisha amalik</p>
+                <div class="status">
+                    <img src="./images/Status Dot.svg" alt="status dot icon" class="icon status-icon">
+                    <p>completed</p>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="table">
+                <div class="event">
+                    <svg width="18" height="18" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="table-left-svg">
+                        <path d="M5.375 4.375L7.125 6L5.375 7.625" stroke="#334155" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <p class="capitalize">future of fintech forum</p>
+                </div>
+                <p class="date">2024-10-25</p>
+                <p class="speaker">john lee</p>
+                <div class="status">
+                    <img src="./images/Status Dot.svg" alt="status dot icon" class="icon status-icon">
+                    <p>completed</p>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="table">
+                <div class="event">
+                    <svg width="18" height="18" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="table-left-svg">
+                        <path d="M5.375 4.375L7.125 6L5.375 7.625" stroke="#334155" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <p class="capitalize">data analytics in business</p>
+                </div>
+                <p class="date">2024-11-12</p>
+                <p class="speaker">rachel moore</p>
+                <div class="status">
+                    <img src="./images/Status Dot.svg" alt="status dot icon" class="icon status-icon">
+                    <p>completed</p>
+                </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="table">
+                <div class="event">
+                    <svg width="18" height="18" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="table-left-svg">
+                        <path d="M5.375 4.375L7.125 6L5.375 7.625" stroke="#334155" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <p class="capitalize">sustainable energy expo</p>
+                </div>
+                <p class="date">2024-09-28</p>
+                <p class="speaker">prof. alan green</p>
+                <div class="status">
+                    <img src="./images/Status Dot.svg" alt="status dot icon" class="icon status-icon">
+                    <p>completed</p>
+                </div>
+            </div>
+
+            <!-- 7 -->
+            <div class="table">
+                <div class="event">
+                    <svg width="18" height="18" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="table-left-svg">
+                        <path d="M5.375 4.375L7.125 6L5.375 7.625" stroke="#334155" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <p class="capitalize">web3 interfaces workshop</p>
+                </div>
+                <p class="date">2024-10-10</p>
+                <p class="speaker">kevin adams</p>
+                <div class="status in-progress">
+                    <img src="./images/Status DotG.svg" alt="status dot icon" class="icon status-icon">
+                    <p>in progress</p>
+                </div>
+            </div>
+
+            <!-- 8 -->
+            <div class="table">
+                <div class="event">
+                    <svg width="18" height="18" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="table-left-svg">
+                        <path d="M5.375 4.375L7.125 6L5.375 7.625" stroke="#334155" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <p class="capitalize">cybersecurity for startups</p>
+                </div>
+                <p class="date">2024-11-19</p>
+                <p class="speaker">emily zhang</p>
+                <div class="status">
+                    <img src="./images/Status Dot.svg" alt="status dot icon" class="icon status-icon">
+                    <p>completed</p>
+                </div>
+            </div>
+
+            <!-- 9 -->
+            <div class="table">
+                <div class="event">
+                    <svg width="18" height="18" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="table-left-svg">
+                        <path d="M5.375 4.375L7.125 6L5.375 7.625" stroke="#334155" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <p class="capitalize">Smart Cities Forum</p>
+                </div>
+                <p class="date">2024-10-18</p>
+                <p class="speaker">dr. maria hernandez</p>
+                <div class="status in-progress">
+                    <img src="./images/Status DotG.svg" alt="status dot icon" class="icon status-icon">
+                    <p>in progress</p>
+                </div>
+            </div>
+
+            <!-- 10 -->
+            <div class="table">
+                <div class="event">
+                    <svg width="18" height="18" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="table-left-svg">
+                        <path d="M5.375 4.375L7.125 6L5.375 7.625" stroke="#334155" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <p class="capitalize">tech safari mixer</p>
+                </div>
+                <p class="date">2024-09-30</p>
+                <p class="speaker">guest panel</p>
+                <div class="status in-progress">
+                    <img src="./images/Status DotG.svg" alt="status dot icon" class="icon status-icon">
+                    <p>in progress</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="show-more-container section">
+            <div class="show-more-controls">
+                <div class="arrow-button left">
+                    <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="pagination-arrow-svg">
+                        <path d="M6.625 4.375L4.875 6L6.625 7.625" stroke="#334155" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </div>
+
+                <p class="active">1</p>
+                <p>2</p>
+                <p>3</p>
+
+                <div class="arrow-button">
+                    <svg width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="pagination-arrow-svg">
+                        <path d="M5.375 4.375L7.125 6L5.375 7.625" stroke="#334155" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </div>
+            </div>
+
+            <div>
+                <div class="filter fit">
+                    <p class="">10 rows</p>
+                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="dropdown-svg">
+                        <path d="M10.6667 7.16675L8.49999 9.50008L6.33333 7.16675" stroke="#334155" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <hr class="horizontal-rule">
+
+    <nav class="mobile-navbar">
+        <div class="mobile-nav-links active">
+            <img src="./images/home.svg" alt="home-icon" class="nav-icon" />
+            <a href="#">home</a>
+        </div>
+        <div class="mobile-nav-links">
+            <img src="./images/solar_calendar-linear.svg" alt="home-icon" class="nav-icon" />
+            <a href="#">events</a>
+        </div>
+        <div class="mobile-nav-links">
+            <img src="./images/solar_user-speak-rounded-linear.svg" alt="home-icon" class="nav-icon" />
+            <a href="#">speakers</a>
+        </div>
+        <div class="mobile-nav-links">
+            <img src="./images/solar_document-linear.svg" alt="home-icon" class="nav-icon" />
+            <a href="#">reports</a>
+        </div>
+        <div class="mobile-nav-links">
+            <img src="./images/user-circle.svg" alt="home-icon" class="nav-icon" />
+            <a href="#">profile</a>
+        </div>
+    </nav>
+
+    <div class="modal">
+        <div class="overview capitalize">
+            <div>
+                <p class="modal-event-name">event name</p>
+                <p class="modal-event-date">event date</p>
+            </div>
+
+            <img src="./images/close.svg" alt="close icon" class="icon">
+        </div>
+
+        <div class="event-description capitalize">
+            <p>event description</p>
+        </div>
+
+        <div class="guest-speakers">
+            <img src="./images/Avatar Group.svg" alt="avatar group" class="avatar-group">
+            <div>
+                <p>3 Guest Speakers: Speaker name A, Speaker name B, Speaker name C</p>
+                <p>300 Attendees</p>
+            </div>
+        </div>
+
+        <div class="modal-buttons capitalize">
+            <button class="edit-button">edit</button>
+            <div class="modal-buttons-delete">
+                <button class="delete-button">delete</button>
+                <button class="mark-completed-button">mark as completed</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="chart.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
