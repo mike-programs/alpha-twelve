@@ -53,12 +53,14 @@ document.querySelectorAll("#leftClick").forEach((button) => {
 setInterval(() => {
   let newIndex = (currentSlide + 1) % slides.length;
   updateSlide(newIndex);
-}, 3000);
+}, 4000);
 
 // COLLAPSE NAVBAR
 
 const collapseButton = document.querySelector(".collapse");
-const navLinks = document.querySelectorAll(".nav-links>:not(svg,img)");
+const navLinks = document.querySelectorAll(
+  ".nav-links>:not(svg,img,div>.toggle-switch)"
+);
 const notification = document.querySelector(".notification");
 const logo = document.querySelector(".logo");
 const header = document.querySelector("header");
@@ -81,9 +83,9 @@ function initializeNavbar() {
 function collapse() {
   isCollapsed = !isCollapsed;
   if (isCollapsed) {
-    console.log("Collapsing navigation");
     navLinks.forEach((navLink) => {
-      navLink.style.display = "none";
+      navLink.style.opacity = 0;
+      navLink.style.width = 0;
     });
 
     logo.innerHTML = "";
@@ -92,9 +94,9 @@ function collapse() {
 
     notification.style.display = "none";
   } else {
-    console.log("Expanding navigation");
     navLinks.forEach((navLink) => {
-      navLink.style.display = "block";
+      navLink.style.opacity = 1;
+      navLink.style.width = "fit-content";
     });
 
     logo.innerHTML = "full logo";
@@ -112,23 +114,10 @@ initializeNavbar();
 collapseButton.addEventListener("click", collapse);
 
 // sasassasssasssasassassas
-const toggleButton = document.getElementById("theme-toggle");
+const toggleButton = document.querySelector(".toggle-switch");
 const bodyElement = document.body;
-
-// Check if the user has a saved theme preference in localStorage
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme) {
-  bodyElement.classList.add(savedTheme);
-} else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-  // Apply dark mode based on system preference
-  bodyElement.classList.add("dark-mode");
-}
 
 // Toggle theme and save preference in localStorage
 toggleButton.addEventListener("click", () => {
   bodyElement.classList.toggle("dark-mode");
-  const currentTheme = bodyElement.classList.contains("dark-mode")
-    ? "dark-mode"
-    : "";
-  localStorage.setItem("theme", currentTheme);
 });
