@@ -89,6 +89,7 @@ function collapse() {
     });
 
     logo.innerHTML = "";
+    logo.style.padding = "1rem";
 
     header.style.width = "5rem";
 
@@ -100,6 +101,7 @@ function collapse() {
     });
 
     logo.innerHTML = "full logo";
+    logo.style.padding = ".5rem";
 
     header.style.width = "100%";
 

@@ -591,12 +591,6 @@ input[type=checkbox].toggle-switch:checked::after {
     background-color: var(--select-color);
     border-radius: var(--border-radius);
     opacity: 1;
-
-
-
-    @starting-style {
-        opacity: 0;
-    }
 }
 
 .summary-item>div {
@@ -940,10 +934,6 @@ input[type=checkbox].toggle-switch:checked::after {
     left: .1rem;
     top: 50%;
     transform: translateY(-50%);
-}
-
-.toggle.dark {
-    /* background-color: #8576FF; */
 }
 
 .dark>.switch {
